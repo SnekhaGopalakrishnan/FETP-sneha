@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Gmail Authentication App</title>
+</head>
+<body>
+    <h1>Welcome to the Flask Gmail Authentication App!</h1>
+    <br>
+    {% if 'gmail_token' in session %}
+        <p>Hello {{ user_name }} <a href="{{ url_for('logout') }}">Sign Out</a></p>
+        <br>
+        <img src="{{ profile_picture }}" alt="Profile Picture">
+        <p>You're signed in with email {{ user_email }}</p>
+    {% endif %}
+</body>
+</html>
